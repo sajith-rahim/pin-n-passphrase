@@ -2,9 +2,9 @@
 
 > GH Action to generate secure passphrases and pin
 
-Log:
+## Log:
 
----
+
 
 Sat Apr 22 18:08:47 UTC 2023
 
