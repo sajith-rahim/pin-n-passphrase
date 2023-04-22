@@ -19,7 +19,7 @@ jobs:
       - name: Generate
         run: |
           python gen.py
-          "\n --- \n" >> README.md
+          echo "\n --- \n" >> README.md
           date >> README.md
           cat README.md
       - name: Push to Repo
