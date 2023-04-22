@@ -1,0 +1,32 @@
+name: Generate Passphrase and Pin
+
+on:
+  schedule:
+    - cron: '55 05 * * 1-5'
+  workflow_dispatch:
+
+
+jobs:
+  report:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v3
+      - name: setup python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+      - name: Generate
+        run: |
+          python gen.py
+          "\n --- \n" >> README.md
+          date >> README.md
+          cat README.md
+      - name: Push to Repo
+        run: |
+          git config --global user.name "Sajith Rahim"
+          git config --global user.email "sajith-rahim@users.noreply.github.com"
+          now=$(date)
+          git add -A
+          git commit -m "[ $now ] Auto update passphrase and pin."
+          git push
