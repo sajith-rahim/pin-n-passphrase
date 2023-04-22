@@ -2,6 +2,10 @@
 
 > GH Action to generate secure passphrases and pin
 
+# Job
+
+> 0 21 */2 * *
+
 ## Log:
 
 
