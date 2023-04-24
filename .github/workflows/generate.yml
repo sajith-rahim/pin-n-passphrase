@@ -2,7 +2,7 @@ name: Generate Passphrase and Pin
 
 on:
   schedule:
-    - cron: '55 05 * * 1-5'
+    - cron: '0 00 */2 * *'
   workflow_dispatch:
 
 
