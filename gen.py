@@ -48,7 +48,7 @@ def generate():
 
     # write json
     with open('passphrase.json', 'w', encoding='utf-8') as f:
-        json.dump({'pass_phrase': pass_phrase, pin: pin}, f, ensure_ascii=True, indent=4)
+        json.dump({'pass_phrase': pass_phrase, 'pin': pin}, f, ensure_ascii=True, indent=4)
 
 if __name__ == '__main__':
     try:
